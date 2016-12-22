@@ -1,0 +1,25 @@
+{
+	"compileOnSave": false,
+	"buildOnSave": false,
+	"compilerOptions": {
+		"target": "es2015",
+		"module": "commonjs",
+        "allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"noImplicitAny": false,
+		"removeComments": false,
+		"sourceMap": true,
+        "sourceRoot": "src",
+        "outDir": "dist",
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
+	},
+	"exclude": [
+        "dist",
+        "node_modules",
+        ".vscode"
+    ]
+}

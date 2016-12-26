@@ -17,3 +17,8 @@ declare module "sharp" {
     var sharp: any;
     export = sharp;
 }
+
+declare module "mailgun-js" {
+    var mailgun: any;
+    export = mailgun;
+}

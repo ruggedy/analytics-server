@@ -23,8 +23,7 @@ class Server {
     constructor(){
         this.app = express();
 
-        process.env['MAILGUN_API_KEY'] = 'key-f901f4658ef67d227243238bb77271cf';
-        process.env['MAILGUN_DOMAIN'] = 'sandbox96b40d2c7a4e41edb1a7d4a96bae1f38.mailgun.org';
+        
         this.mongoose.Promise = global.Promise;
         this.mongoose.connect('localhost:27017/weavee-analytics');
 
@@ -33,7 +32,8 @@ class Server {
 
     ExpressConfiguration = () => {
 
-
+        process.env['MAILGUN_API_KEY'] = 'key-f901f4658ef67d227243238bb77271cf';
+        process.env['MAILGUN_DOMAIN'] = 'sandbox96b40d2c7a4e41edb1a7d4a96bae1f38.mailgun.org';
         this.app.use(express.static(__dirname+ "/public"));
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({extended: true}));
